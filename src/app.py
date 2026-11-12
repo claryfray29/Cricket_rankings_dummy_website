@@ -464,8 +464,10 @@ def update_player(player_id: int, body: PlayerUpdate):
 
 
 # ----------------------------------------------------------------------
-# Frontend (plain HTML/CSS/JS in src/frontend/), mounted LAST so /api wins
+# Frontend (plain HTML/CSS/JS in web/), mounted LAST so /api wins
 # ----------------------------------------------------------------------
-FRONTEND_DIR = Path(__file__).parent / "frontend"
+FRONTEND_DIR = Path(__file__).resolve().parent / "web"
+if not FRONTEND_DIR.is_dir():
+    FRONTEND_DIR = Path(__file__).resolve().parent.parent / "web"
 if FRONTEND_DIR.is_dir():
     app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")

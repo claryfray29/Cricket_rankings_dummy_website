@@ -1,0 +1,8 @@
+# Database Connection Configuration Template
+# Copy this file to .env and fill in your local MySQL password:
+#   cp .env.example .env
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_mysql_password_here
+DB_NAME=icc_rankings

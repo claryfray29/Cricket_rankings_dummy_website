@@ -1,0 +1,29 @@
+# Environment variables (keep local credentials private)
+.env
+*.env
+!.env.example
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Final submission bundle artifacts (keep out of git if generated locally)
+*.mp4
+*.zip
